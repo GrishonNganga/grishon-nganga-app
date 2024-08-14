@@ -29,7 +29,7 @@ export const signin = async (userDetails: SignIn) => {
 };
 
 export const getUsers = async (): Promise<UserPayload[]> => {
-  const user = sessionStorage.getItem("userLoggedIn");
+  const user = window.sessionStorage.getItem("userLoggedIn");
   if (!user) throw new Error("Not logged in");
   const userObj = JSON.parse(user);
   try {
@@ -50,7 +50,7 @@ export const getUsers = async (): Promise<UserPayload[]> => {
 };
 
 export const searchForUser = async (userName: string) => {
-  const user = sessionStorage.getItem("userLoggedIn");
+  const user = window.sessionStorage.getItem("userLoggedIn");
   if (!user) throw new Error("Not logged in");
   const userObj = JSON.parse(user);
   try {

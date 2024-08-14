@@ -34,7 +34,7 @@ export default function Signin() {
 
       //Pull random user and store as logged in user to simulate logging in.
       // This is because, there is no way of getting logged in user.
-      sessionStorage.setItem("userLoggedIn", JSON.stringify(data));
+      window.sessionStorage.setItem("userLoggedIn", JSON.stringify(data.payload));
       router.push("/");
     },
   });

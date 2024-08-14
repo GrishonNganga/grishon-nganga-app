@@ -3,7 +3,7 @@
 import { redirect } from "next/navigation";
 
 export default function WithAuth({ children }: { children: React.ReactNode }) {
-  const storedUser = sessionStorage.getItem("userLoggedIn");
+  const storedUser = window.sessionStorage.getItem("userLoggedIn");
   if (storedUser) {
     return <>{children}</>;
   } else {
